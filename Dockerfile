@@ -9,6 +9,7 @@ RUN  yum update -y && \
      yum install -y hadoop-hdfs-datanode && \
      yum install -y hadoop-yarn-resourcemanager && \
      yum install -y hadoop-mapreduce && \
+     yum install -y hadoop-yarn-nodemanager && \
      yum install -y hadoop-client
 
 
