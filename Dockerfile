@@ -7,9 +7,9 @@ RUN  yum update -y && \
      wget -q -O /etc/yum.repos.d/cloudera-cdh5.repo http://archive.cloudera.com/cdh5/redhat/6/x86_64/cdh/cloudera-cdh5.repo && \
      sed -ri 's/cdh\/5/cdh\/5.9.0/' /etc/yum.repos.d/cloudera-cdh5.repo  && \
      yum install -y hadoop-hdfs-datanode && \
-     hadoop-yarn-resourcemanager && \
-     hadoop-mapreduce && \
-     hadoop-client
+     yum install -y hadoop-yarn-resourcemanager && \
+     yum install -y hadoop-mapreduce && \
+     yum install -y hadoop-client
 
 
 
