@@ -5,13 +5,11 @@ RUN  yum update -y && \
      yum install -y java-1.7.0-openjdk java-1.7.0-openjdk-devel && \
      yum -y install initscripts && \
      wget -q -O /etc/yum.repos.d/cloudera-cdh5.repo http://archive.cloudera.com/cdh5/redhat/6/x86_64/cdh/cloudera-cdh5.repo && \
-     sed -ri 's/cdh\/5/cdh\/5.9.0/' /etc/yum.repos.d/cloudera-cdh5.repo
-# && \
-#     yum install -y hadoop-hdfs-datanode
-#&& \
-#                    hadoop-yarn-resourcemanager && \
-#                    hadoop-mapreduce && \
-#                    hadoop-client
+     sed -ri 's/cdh\/5/cdh\/5.9.0/' /etc/yum.repos.d/cloudera-cdh5.repo  && \
+     yum install -y hadoop-hdfs-datanode && \
+     hadoop-yarn-resourcemanager && \
+     hadoop-mapreduce && \
+     hadoop-client
 
 
 
